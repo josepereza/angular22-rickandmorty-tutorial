@@ -1,0 +1,189 @@
+.features-section {
+  padding: 120px 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(108, 92, 231, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(0, 206, 201, 0.04) 0%, transparent 50%),
+    linear-gradient(180deg, #ffffff 0%, #fcfaff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.features-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(108, 92, 231, 0.15), transparent);
+}
+
+/* --- Badge --- */
+.features-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, rgba(108, 92, 231, 0.1), rgba(108, 92, 231, 0.04));
+  color: var(--primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 6px 18px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 1px solid rgba(108, 92, 231, 0.12);
+  backdrop-filter: blur(4px);
+}
+
+/* --- Title & Subtitle --- */
+.features-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+}
+
+.features-subtitle {
+  font-size: 1.15rem;
+  color: #777;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* --- Card --- */
+.feature-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 48px 32px 40px;
+  text-align: center;
+  border: 1px solid rgba(108, 92, 231, 0.06);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 0 0 1px rgba(108, 92, 231, 0.08),
+    0 20px 60px rgba(108, 92, 231, 0.1);
+}
+
+/* --- Corner accent --- */
+.feature-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle at 100% 0%, rgba(108, 92, 231, 0.06), transparent 70%);
+  border-radius: 0 24px 0 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.feature-card:hover .feature-corner {
+  opacity: 1;
+}
+
+/* --- Icon --- */
+.feature-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.feature-icon-shape {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(108, 92, 231, 0.08), rgba(108, 92, 231, 0.02));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(108, 92, 231, 0.1);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, background 0.35s ease;
+}
+
+.feature-card:hover .feature-icon-shape {
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 8px 24px rgba(108, 92, 231, 0.12);
+  background: linear-gradient(135deg, rgba(108, 92, 231, 0.12), rgba(108, 92, 231, 0.04));
+}
+
+.feature-icon-shape svg {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.feature-card:hover .feature-icon-shape svg {
+  transform: scale(1.05);
+}
+
+/* --- Content --- */
+.feature-content {
+  position: relative;
+  z-index: 1;
+}
+
+.feature-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1a1a2e;
+  transition: color 0.3s ease;
+}
+
+.feature-card:hover .feature-title {
+  color: var(--primary-dark);
+}
+
+.feature-text {
+  color: #777;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* --- Fade-up animation --- */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.fade-up.visible {
+  animation: fadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: var(--delay, 200ms);
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .features-section {
+    padding: 80px 0;
+  }
+
+  .features-title {
+    font-size: 2rem;
+  }
+
+  .feature-card {
+    padding: 40px 24px 32px;
+  }
+
+  .feature-text {
+    max-width: 100%;
+  }
+}

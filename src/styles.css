@@ -1,0 +1,48 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+:root {
+  --primary: #6C5CE7;
+  --primary-dark: #4B3CC4;
+  --primary-light: rgba(108, 92, 231, 0.08);
+  --text-dark: #111;
+  --text-light: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(108, 92, 231, 0.2);
+  color: inherit;
+}
+
+.btn-primary {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  box-shadow: 0 4px 14px rgba(108, 92, 231, 0.25);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark) !important;
+  border-color: var(--primary-dark) !important;
+  box-shadow: 0 6px 20px rgba(108, 92, 231, 0.35) !important;
+}
+
+.btn-outline-secondary {
+  border-color: #ddd;
+  color: #555;
+}
+
+.btn-outline-secondary:hover {
+  background: rgba(108, 92, 231, 0.04);
+  border-color: var(--primary);
+  color: var(--primary);
+}

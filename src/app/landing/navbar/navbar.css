@@ -1,0 +1,58 @@
+.navbar {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(108, 92, 231, 0.1);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  padding-block: 12px;
+}
+
+.navbar-scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 1px 20px rgba(108, 92, 231, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: #2d2d2d;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand:hover {
+  color: var(--primary);
+}
+
+.navbar-brand svg {
+  color: var(--primary);
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #444;
+  margin-inline: 4px;
+  border-radius: 8px;
+  transition: color 0.2s, background 0.2s;
+  padding-inline: 14px;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+  background: rgba(108, 92, 231, 0.06);
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 6px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2868,92,231,0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
