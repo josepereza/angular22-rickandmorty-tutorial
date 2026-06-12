@@ -4,10 +4,11 @@ import { Features } from './features/features.component';
 import { NavbarComponent } from './navbar/navbar';
 import { FooterComponent } from './footer/footer.component';
 import { BeneficiosComponent } from './beneficios-component/beneficios-component';
+import { MotivacionComponent } from './motivacion/motivacion-component/motivacion-component';
 
 @Component({
   selector: 'app-landing',
-  imports: [HeroComponent, Features, NavbarComponent, FooterComponent, BeneficiosComponent],
+  imports: [HeroComponent, MotivacionComponent, Features, NavbarComponent, FooterComponent, BeneficiosComponent],
   templateUrl: './landing.html',
   styleUrl: './landing.css',
 })

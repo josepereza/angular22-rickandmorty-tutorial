@@ -1,5 +1,21 @@
-<app-navbar></app-navbar>
-<app-hero></app-hero>
+<app-navbar ></app-navbar><app-hero></app-hero>
 <app-features></app-features>
-<app-beneficios></app-beneficios>
+
+@defer (on viewport) {
+  <app-motivacion-component></app-motivacion-component>
+} @placeholder {
+<div style="min-height: 450px; display: block; background-color: transparent;"></div>}
+
+
+
+
+@defer (on interaction(dispararBeneficios); on viewport; prefetch on idle) {  
+    <app-beneficios id="beneficios"></app-beneficios>
+
+} @placeholder {
+  <div #dispararBeneficios id="beneficios" style="min-height: 450px; display: block;"></div>
+}
+
+
+
 <app-footer></app-footer>

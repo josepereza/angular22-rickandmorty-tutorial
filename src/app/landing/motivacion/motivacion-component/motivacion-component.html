@@ -1,0 +1,36 @@
+<div class="container my-5">
+      <div 
+        class="p-5 text-center bg-dark text-white rounded-5 shadow-lg position-relative overflow-hidden jumbotron-fade"
+        [class.visible]="isVisible()"
+      >
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-gradient opacity-10" style="z-index: 0;"></div>
+        
+        <div class="position-relative" style="z-index: 1;">
+          <h1 class="display-4 fw-bold mb-3 text-warning">Lleva tu Negocio al Siguiente Nivel</h1>
+          <p class="col-lg-8 mx-auto lead  mb-5 text-white">
+            Creamos soluciones digitales a medida que transforman ideas en realidades de alto impacto. 
+            ¿Estás listo para el cambio?
+          </p>
+
+          <div class="d-flex justify-content-center align-items-center" style="min-height: 80px;">
+            <div 
+              class="bg-secondary bg-opacity-25 border border-secondary rounded-4 p-3 max-w-md shadow-sm transicion-texto"
+              [class.visible-texto]="showQuote()"
+            >
+              <p class="fst-italic mb-0 text-light fs-5">
+                "{{ currentQuote() }}"
+              </p>
+            </div>
+          </div>
+
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-5">
+            <button type="button" class="btn btn-warning btn-lg px-4 gap-3 fw-bold rounded-pill shadow-sm">
+              Comenzar Ahora
+            </button>
+            <button type="button" class="btn btn-outline-light btn-lg px-4 rounded-pill">
+              Saber Más
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>

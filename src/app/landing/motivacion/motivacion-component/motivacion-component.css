@@ -1,0 +1,30 @@
+:host {
+      display: block;
+      width: 100%;
+    }
+
+    /* ESTADO INICIAL: Totalmente invisible y desplazado hacia abajo */
+    .jumbotron-fade {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 3.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+      will-change: opacity, transform;
+    }
+
+    /* ESTADO FINAL: Se activa con total suavidad controlada por JS */
+    .jumbotron-fade.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Animación del texto rotativo interno */
+    .transicion-texto {
+      opacity: 0;
+      transform: scale(0.95);
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    .visible-texto {
+      opacity: 1;
+      transform: scale(1);
+    }
