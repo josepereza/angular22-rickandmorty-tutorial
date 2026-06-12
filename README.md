@@ -1,4 +1,5 @@
 # Angular21LandingpageTutorial
+* Ejemplo de combinacion en el componente beneficios de @defer , fade y anclaje navbar. 
 ![Vista previa del sitio](landing-page3.png)
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.11.
